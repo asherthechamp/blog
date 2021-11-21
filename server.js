@@ -7,10 +7,18 @@ const methodOverride = require("method-override");
 
 app.use(methodOverride("_method"));
 
-mongoose.connect("mongodb://localhost/blog", {
-  useNewUrlparser: true,
-  useUnifiedTopology: true,
-});
+const user = "asherthechamp";
+const pass = "MERNdev123";
+const db = "blog";
+const cls = "cluster0.odnxk";
+
+mongoose.connect(
+  `mongodb+srv://${user}:${pass}@${cls}.mongodb.net/${db}?retryWrites=true&w=majority`,
+  {
+    useNewUrlparser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 app.set("view engine", "ejs");
 
