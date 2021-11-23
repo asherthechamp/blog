@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devstart": "nodemon server.js"
+    "devstart": "nodemon server.js",
+    "predeploy": "npm run buiid",
+    "deploy": "gh-pages -d build",
+    "build": "webpack --config=webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,9 @@
     "slugify": "^1.6.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+    "nodemon": "^2.0.15",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
+  },
+  "HomePage": "http://asherthechamp.github.io/blog"
 }

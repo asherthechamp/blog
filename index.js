@@ -11,6 +11,8 @@ const user = "asherthechamp";
 const pass = "MERNdev123";
 const db = "blog";
 const cls = "cluster0.odnxk";
+// `mongodb+srv://${user}:${pass}@${cls}.mongodb.net/${db}?retryWrites=true&w=majority`,
+
 
 mongoose.connect(
   `mongodb+srv://${user}:${pass}@${cls}.mongodb.net/${db}?retryWrites=true&w=majority`,
